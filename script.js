@@ -1,12 +1,29 @@
 
-let result=document.getElementById("result");
+// window.onload(
+
+let result;
+
+let init = () => {
+  result = document.getElementById("result");
+//   console.log(result);
+};
+
+window.onload = init;
 
 
-let clr = ()=>{
-    result.innerText="";
+
+
+
+let solve = () => {
+    let val = result.value;
+    result.value = math.evaluate(val);
 }
 
 
-let dis= (val)=> {
-    result.innerText+=val;
-}
+let clr = () => {
+  result.value = "";
+};
+
+let dis = (val) => {
+    result.value += val;
+};
